@@ -5,9 +5,6 @@ function MyApp({ Component, pageProps }) {
         <div>
             {' '}
             <Component {...pageProps} />
-            <footer>
-                <p>© 2021 Kshitiz</p>
-            </footer>
         </div>
     )
 }

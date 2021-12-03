@@ -1,39 +1,27 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Banner from '../components/banner'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+    const handleOnBannerBtnClick = () => {
+        console.log('Hi download button clicked.')
+    }
+
     return (
         <div className={styles.container}>
             <Head>
                 <title>Kshitiz Rai</title>
                 <meta name="description" content="Kshitiz Rai" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/logo_kshitiz.png" />
             </Head>
 
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Hi, I'm Kshitiz.<a href="https://kshitizrai.com.np">🎈</a>
-                </h1>
+                <Banner
+                    buttonText="Download CV"
+                    handleOnClick={handleOnBannerBtnClick}
+                />
             </main>
-
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image
-                            src="/vercel.svg"
-                            alt="Vercel Logo"
-                            width={72}
-                            height={16}
-                        />
-                    </span>
-                </a>
-            </footer>
         </div>
     )
 }
